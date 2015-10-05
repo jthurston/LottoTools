@@ -1,6 +1,12 @@
 require 'csv'
 
-a = CSV.read("lottery.csv").flatten
+if ARGV.empty?
+  a = CSV.read("lottery.csv").flatten
+else
+  filename = ARGV.first	
+  a = CSV.read(filename).flatten
+end
+
 
 # make the hash default to 0 so that += will work correctly
 b = Hash.new(0)
