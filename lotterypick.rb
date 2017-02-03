@@ -63,14 +63,15 @@ numArray = []
 pivotBall  = pivotBall.to_i
 
 puts ""
-puts "You chose the " + lottery + " lottery!"
-line = "It's highest main number is " + hiNum.to_s + ". "
-line += "It has " + howMany.to_s + " main numbers. "
+puts "You chose the " + lottery.red + " lottery!"
+puts "It has " + howMany.to_s.red + " main numbers. "
 if pivotHiNum > 0
-  line += pivotName.to_s + " highest Number is " + pivotHiNum.to_s
+  puts "Plus a " + pivotName.to_s.red
 end
-
-puts line.green
+puts "It's highest main number is " + hiNum.to_s.red
+if pivotHiNum > 0
+  puts pivotName.to_s.red + " highest Number is " + pivotHiNum.to_s.red
+end
 
 while numArray.count < howMany
   b = rand(1..hiNum)
