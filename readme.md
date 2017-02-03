@@ -28,6 +28,22 @@ or add a correctly formatted file as an argument
 
    ruby hilo.rb test.csv
 
+### lotterypick.rb
+
+This requests input from the end user for which lotteries they want to generate some numbers on.
+
+   ruby lottery.rb
+
+### autopick.rb
+
+This generates numbers based on the input when ran.
+
+   ruby autopick.rb HOW MANY NUMBERS : HIGHEST OF THOSE : HIGHEST FOR PIVOT NUMBER
+
+### RoadMap
+
+   I may convert the others to ask questions like lotterpick.rb does instead of relying on the 
+   user to understand the input parameters.
 
 ### Disclaimer
 Jeff Thurston or Thirsty Man Designs is not resposible for any accuracy or financial loss due to the use of this application.
