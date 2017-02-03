@@ -1,15 +1,9 @@
 require 'csv'
+require "highline/import"
+require "colorize"
 
-if ARGV.empty?
-  puts "You need to input something\n"
-  puts "Syntax as follows: ruby generate.rb <highestnumber> <howmanynumbers>"
-  exit
-end
-
-hiNum = ARGV.shift
-howMany = ARGV.shift
-
-raise "too many arguments" unless ARGV.empty?
+howMany = ask "How many numbers do you want to generate?"
+hiNum = ask "Okay, what is the highest number?"
 
 hiNum = hiNum.to_i
 howMany = howMany.to_i
@@ -31,3 +25,11 @@ CSV.open("lottery.csv", "wb") do |csv|
   csv << numArray
 end
 puts "lottery.csv created/updated. Now run ruby hilo.rb"
+
+hiloRun = ask "Do the hi lo analysis? (Y or N)"
+
+if hiloRun == "Y" || hiloRun == "y"
+  spawn 'ruby hilo.rb'
+else
+
+end
